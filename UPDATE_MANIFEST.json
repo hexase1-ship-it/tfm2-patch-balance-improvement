@@ -1,20 +1,20 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.28-r13",
+  "latest_version": "2026.05.28-r14",
   "release_date": "2026-05-29",
   "mandatory": false,
-  "summary": "Caps full patch-note champion count through the rebalancer and neutralizes action patch fields to prevent mixed-direction cards.",
+  "summary": "Restores action/skill patch fields with controlled field-specific limits and patches the official 0.4.5 extra tier tables.",
   "notes": [
-    "When tfm2_patch_rebalancer is enabled, tracked stat/growth champions are capped per full patch event: weak=4, normal=6, strong=8.",
-    "Same-champion mixed stat/growth directions now keep the dominant magnitude direction and revert the other side.",
-    "All action patch fields are locked to 1.0..1.0 because the public native SDK does not expose stable action setters."
+    "Action/skill patch fields are restored from the r13 1.0..1.0 lock to controlled limits: 80%..120%, 85%..115%, 90%..110%, and ultimate cooldown 66.7%..150%.",
+    "Official 0.4.5 extra patch-generation buff/nerf tier tables are patched so weak/normal nerfs are not treated as buff-side tiers.",
+    "Apply now patches TeamfightManager2.exe first, then bundle.game_data, to avoid half-upgraded action-field states."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r13/TFM2_Patch_Balance_Improvement_v2026.05.28-r13.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r13.zip",
-    "sha256": "c1221ec4f5bf3c09322197039cff67b8aa2bb0d461d00024fe5167e00fdf4285",
-    "size": 9063433
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r14/TFM2_Patch_Balance_Improvement_v2026.05.28-r14.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r14.zip",
+    "sha256": "687B3E916ABF7164C5C9B6D0F01F4820225081BB57501B84FB4C967D3529F3DB",
+    "size": 9077895
   },
   "compatibility": {
     "supported_steam_buildids": [
