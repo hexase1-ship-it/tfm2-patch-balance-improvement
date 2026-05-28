@@ -1,20 +1,20 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.28-r12",
-  "release_date": "2026-05-28",
+  "latest_version": "2026.05.28-r13",
+  "release_date": "2026-05-29",
   "mandatory": false,
-  "summary": "Adds safety guards for apply preflight and save normalizer apply mode.",
+  "summary": "Caps full patch-note champion count through the rebalancer and neutralizes action patch fields to prevent mixed-direction cards.",
   "notes": [
-    "Checks exe compatibility before modifying bundle.game_data, preventing partial bundle-only application on unsupported executables.",
-    "Save normalizer apply mode now requires at least one save backup before apply.flag is created.",
-    "Normalizer install, uninstall, enable, disable, and apply flag changes now stop when TeamfightManager2.exe is running."
+    "When tfm2_patch_rebalancer is enabled, tracked stat/growth champions are capped per full patch event: weak=4, normal=6, strong=8.",
+    "Same-champion mixed stat/growth directions now keep the dominant magnitude direction and revert the other side.",
+    "All action patch fields are locked to 1.0..1.0 because the public native SDK does not expose stable action setters."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r12/TFM2_Patch_Balance_Improvement_v2026.05.28-r12.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r12.zip",
-    "sha256": "4373c4e575ebe184182dd40c7bd0d0f6ac45128fc965462746ac169b64735872",
-    "size": 9044189
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r13/TFM2_Patch_Balance_Improvement_v2026.05.28-r13.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r13.zip",
+    "sha256": "c1221ec4f5bf3c09322197039cff67b8aa2bb0d461d00024fe5167e00fdf4285",
+    "size": 9063433
   },
   "compatibility": {
     "supported_steam_buildids": [
