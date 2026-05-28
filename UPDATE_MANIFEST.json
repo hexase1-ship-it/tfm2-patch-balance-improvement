@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "name": "TFM2 Patch Balance Improvement",
+  "latest_version": "2026.05.28-r10",
+  "release_date": "2026-05-28",
+  "mandatory": false,
+  "summary": "Remote updater hardening, compatibility reporting, update log, and detailed error logs.",
+  "notes": [
+    "Remote update checks and downloads now support http, https, file URLs, plain local paths, and Windows absolute paths.",
+    "Downloaded ZIPs are verified by SHA256, size, safe extraction paths, and embedded release_manifest.json version.",
+    "Compatibility output now distinguishes local patcher support from the support list declared by the remote manifest.",
+    "Detailed error logs include admin state, platform, argv, release manifest, update config, and key environment variables."
+  ],
+  "download": {
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r10/TFM2_Patch_Balance_Improvement_v2026.05.28-r10.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r10.zip",
+    "sha256": "3DFEB1B589E614696A762DF632D5AA837C8A7B7378B27996F87551AECAFD513C",
+    "size": 9037190
+  },
+  "compatibility": {
+    "supported_steam_buildids": [
+      "23447168"
+    ],
+    "supported_patch_sets": [
+      "legacy_pre_0_4_5_r6",
+      "official_0_4_5_build_23447168"
+    ]
+  }
+}
