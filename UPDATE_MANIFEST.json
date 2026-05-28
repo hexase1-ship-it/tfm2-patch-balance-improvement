@@ -1,21 +1,20 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.28-r10",
+  "latest_version": "2026.05.28-r11",
   "release_date": "2026-05-28",
   "mandatory": false,
-  "summary": "Remote updater hardening, compatibility reporting, update log, and detailed error logs.",
+  "summary": "Fixes an official 0.4.5 weak-intensity selected champion count path that could still produce 2 patched champions.",
   "notes": [
-    "Remote update checks and downloads now support http, https, file URLs, plain local paths, and Windows absolute paths.",
-    "Downloaded ZIPs are verified by SHA256, size, safe extraction paths, and embedded release_manifest.json version.",
-    "Compatibility output now distinguishes local patcher support from the support list declared by the remote manifest.",
-    "Detailed error logs include admin state, platform, argv, release manifest, update config, and key environment variables."
+    "Adds the official 0.4.5 selected-count path at 0x14126877e to the 4..6 champion-count patch set.",
+    "Official 0.4.5 now has 16 exe patches and 3 selected-count paths.",
+    "Keeps weak, normal, and strong patch intensities on the same selected champion count range."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r10/TFM2_Patch_Balance_Improvement_v2026.05.28-r10.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r10.zip",
-    "sha256": "17FCCCC9B3FF237DC56C40A06DD137B8AE610EC21ED7B44672DC10586610A613",
-    "size": 9037568
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r11/TFM2_Patch_Balance_Improvement_v2026.05.28-r11.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r11.zip",
+    "sha256": "5937ccaab1c6520ac1b4886256343d44b21f0466700ef0ac8074c3a5f729acfe",
+    "size": 9040340
   },
   "compatibility": {
     "supported_steam_buildids": [
