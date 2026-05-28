@@ -1,20 +1,20 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.28-r11",
+  "latest_version": "2026.05.28-r12",
   "release_date": "2026-05-28",
   "mandatory": false,
-  "summary": "Fixes an official 0.4.5 weak-intensity selected champion count path that could still produce 2 patched champions.",
+  "summary": "Adds safety guards for apply preflight and save normalizer apply mode.",
   "notes": [
-    "Adds the official 0.4.5 selected-count path at 0x14126877e to the 4..6 champion-count patch set.",
-    "Official 0.4.5 now has 16 exe patches and 3 selected-count paths.",
-    "Keeps weak, normal, and strong patch intensities on the same selected champion count range."
+    "Checks exe compatibility before modifying bundle.game_data, preventing partial bundle-only application on unsupported executables.",
+    "Save normalizer apply mode now requires at least one save backup before apply.flag is created.",
+    "Normalizer install, uninstall, enable, disable, and apply flag changes now stop when TeamfightManager2.exe is running."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r11/TFM2_Patch_Balance_Improvement_v2026.05.28-r11.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r11.zip",
-    "sha256": "5937ccaab1c6520ac1b4886256343d44b21f0466700ef0ac8074c3a5f729acfe",
-    "size": 9040340
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r12/TFM2_Patch_Balance_Improvement_v2026.05.28-r12.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r12.zip",
+    "sha256": "4373c4e575ebe184182dd40c7bd0d0f6ac45128fc965462746ac169b64735872",
+    "size": 9044189
   },
   "compatibility": {
     "supported_steam_buildids": [
