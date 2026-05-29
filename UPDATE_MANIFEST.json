@@ -14,8 +14,8 @@
   "download": {
     "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r16/TFM2_Patch_Balance_Improvement_v2026.05.29-r16.zip",
     "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r16.zip",
-    "sha256": "69A8FC73CD89DD4436BCE3EC9C16A3DEDEDA6928F64F10F8F22F3897E634D799",
-    "size": 9087002
+    "sha256": "51DEF952E644E05FD706627C948FB3E555DD73217D8FAEF40E12051737C64FEF",
+    "size": 9087495
   },
   "compatibility": {
     "supported_steam_buildids": [
