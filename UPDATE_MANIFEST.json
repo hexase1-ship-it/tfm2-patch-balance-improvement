@@ -1,20 +1,20 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.28-r14",
+  "latest_version": "2026.05.28-r15",
   "release_date": "2026-05-29",
   "mandatory": false,
-  "summary": "Restores action/skill patch fields with controlled field-specific limits and patches the official 0.4.5 extra tier tables.",
+  "summary": "Keeps the r14 action/skill restore and blocks the optional native rebalancer from being enabled for normal play because it can desync patch-note UI from actual values.",
   "notes": [
-    "Action/skill patch fields are restored from the r13 1.0..1.0 lock to controlled limits: 80%..120%, 85%..115%, 90%..110%, and ultimate cooldown 66.7%..150%.",
-    "Official 0.4.5 extra patch-generation buff/nerf tier tables are patched so weak/normal nerfs are not treated as buff-side tiers.",
-    "Apply now patches TeamfightManager2.exe first, then bundle.game_data, to avoid half-upgraded action-field states."
+    "The optional native patch rebalancer is now treated as research-only and enable is blocked by default.",
+    "Reason: it can change real champion stat/growth values after the in-game patch-note article has already been generated.",
+    "Use the default EXE/bundle patch path for normal play; it keeps patch-note UI and actual values aligned."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r14/TFM2_Patch_Balance_Improvement_v2026.05.28-r14.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r14.zip",
-    "sha256": "9095868052A83CD182D3E9C906FB9B84870BECD2712AFEA6C5999264E8FDE74F",
-    "size": 9078573
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r15/TFM2_Patch_Balance_Improvement_v2026.05.28-r15.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r15.zip",
+    "sha256": "8C600F234B7BD6432C8018C86D4DD9EA958889C30840D2D822563A40FFDFEA4F",
+    "size": 9081645
   },
   "compatibility": {
     "supported_steam_buildids": [
