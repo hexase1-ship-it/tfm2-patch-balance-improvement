@@ -1,30 +1,32 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.29-r18",
+  "latest_version": "2026.05.29-r19",
   "release_date": "2026-05-29",
   "mandatory": false,
-  "summary": "Adds actual stat/growth apply-vector duplicate protection so patch-note values and champion detail values stay aligned.",
+  "summary": "Adds support for the new official Steam build 23466958 while preserving the existing balance-policy rules.",
   "notes": [
-    "Weak uses 80%..125%, normal uses 75%..133.33%, and strong uses 66.7%..150%.",
-    "Selected champion count and per-champion item count are kept at the strong-baseline volume for every intensity.",
-    "The r17 patch-note merge keep-first policy is retained.",
-    "r18 additionally guards the actual stat/growth apply vector at 0x141265340 and 0x1412654E0 so duplicate field entries cannot apply twice.",
-    "Intensity ranges are unchanged: weak 80%..125%, normal 75%..133.33%, strong 66.7%..150%."
+    "Supports Steam buildid 23466958 with executable patch set official_build_23466958.",
+    "Weak uses 80%..125%, normal uses 75%..133.33%, and strong uses 66.7%..150%; the ranges are unchanged.",
+    "Selected champion count and per-champion item count remain at the strong-baseline volume for every intensity.",
+    "The patch-note keep-first and actual stat/growth apply-vector keep-first duplicate guards are retained on the new EXE layout.",
+    "Steam updates can restore TeamfightManager2.exe and bundle.game_data, so rerun APPLY_PATCH.bat after updating the game."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r18/TFM2_Patch_Balance_Improvement_v2026.05.29-r18.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r18.zip",
-    "sha256": "58922B9DC1CE35ECD41D55F4DDDB83C802C31B157D8989E9FE64209B8D814628",
-    "size": 9103265
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r19/TFM2_Patch_Balance_Improvement_v2026.05.29-r19.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r19.zip",
+    "sha256": "0F369FB24876A2B1B611F3B8F60EB54AC381022A355D4BEB5C7A87385AEB8532",
+    "size": 9196589
   },
   "compatibility": {
     "supported_steam_buildids": [
-      "23447168"
+      "23447168",
+      "23466958"
     ],
     "supported_patch_sets": [
       "legacy_pre_0_4_5_r6",
-      "official_0_4_5_build_23447168"
+      "official_0_4_5_build_23447168",
+      "official_build_23466958"
     ]
   }
 }
