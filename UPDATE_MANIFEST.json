@@ -1,20 +1,21 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.28-r15",
+  "latest_version": "2026.05.29-r16",
   "release_date": "2026-05-29",
   "mandatory": false,
-  "summary": "Keeps the r14 action/skill restore and blocks the optional native rebalancer from being enabled for normal play because it can desync patch-note UI from actual values.",
+  "summary": "Redesigns patch intensity so weak/normal/strong use the same champion and item volume, differing only by final numeric change range.",
   "notes": [
-    "The optional native patch rebalancer is now treated as research-only and enable is blocked by default.",
-    "Reason: it can change real champion stat/growth values after the in-game patch-note article has already been generated.",
-    "Use the default EXE/bundle patch path for normal play; it keeps patch-note UI and actual values aligned."
+    "Weak now clamps generated numeric changes to 90%..110%, normal to 85%..115%, and strong to 80%..120%.",
+    "Selected champion count and per-champion item count are kept at the strong-baseline volume for every intensity.",
+    "A duplicate champion.field merge patch keeps the first generated item, preventing same-event compounding such as 100 -> 120 -> 144.",
+    "The fix is applied inside the EXE generation/merge path so the in-game patch note and actual champion data stay aligned."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.28-r15/TFM2_Patch_Balance_Improvement_v2026.05.28-r15.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.28-r15.zip",
-    "sha256": "8C600F234B7BD6432C8018C86D4DD9EA958889C30840D2D822563A40FFDFEA4F",
-    "size": 9081645
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r16/TFM2_Patch_Balance_Improvement_v2026.05.29-r16.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r16.zip",
+    "sha256": "9E5DF1589C91776F704FA8BF9DD88401FBFB6EACB0DF50D4B5BDEC97C99C6675",
+    "size": 9087879
   },
   "compatibility": {
     "supported_steam_buildids": [
