@@ -1,25 +1,26 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.29-r22",
+  "latest_version": "2026.05.29-r23",
   "release_date": "2026-05-29",
   "mandatory": false,
-  "summary": "Fixes the r21 stat/growth endpoint hook by patching the real caller-side value ratio sites used by newly generated patch notes.",
+  "summary": "Hotfixes the r22 stat/growth caller-side scaler so newly generated patch days do not clobber xmm0 during loading.",
   "notes": [
     "Supports Steam buildid 23466958 with executable patch set official_build_23466958.",
     "Weak uses 80%..125%, normal uses 75%..133.33%, and strong uses 66.7%..150%; the ranges are unchanged.",
     "Action patch values move by 20%/25%/30% of the effective field range for weak/normal/strong instead of jumping directly to the endpoint.",
-    "The r21 selector hook at 0x141CF3268 is restored to official bytes because it did not stop newly generated stat/growth endpoint values.",
-    "The real stat/growth caller sites at 0x140C3B0CE and 0x140C3D8C2 now scale endpoint ratios 45% of the way from 1.0 before entering the common value generator.",
+    "The r21 selector hook at 0x141CF3268 remains restored to official bytes because it did not stop newly generated stat/growth endpoint values.",
+    "The real stat/growth caller sites at 0x140C3B0CE and 0x140C3D8C2 still scale endpoint ratios 45% of the way from 1.0 before entering the common value generator.",
+    "r23 changes the injected scaler to avoid using xmm0 as a scratch register during patch generation.",
     "Selected champion count and per-champion item count remain at the strong-baseline volume for every intensity.",
     "The patch-note keep-first and actual stat/growth apply-vector keep-first duplicate guards are retained on the new EXE layout.",
     "Steam updates can restore TeamfightManager2.exe and bundle.game_data, so rerun APPLY_PATCH.bat after updating the game."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r22/TFM2_Patch_Balance_Improvement_v2026.05.29-r22.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r22.zip",
-    "sha256": "0983970c1d7ce8115ff744bda4388f734e3b805d53327359bfef1f50af77f86f",
-    "size": 9454160
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r23/TFM2_Patch_Balance_Improvement_v2026.05.29-r23.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r23.zip",
+    "sha256": "532f5bbb3ba5de05ae89ff5a14054c4d30493d3c886fb556e16ed249a3361495",
+    "size": 9455206
   },
   "compatibility": {
     "supported_steam_buildids": [
