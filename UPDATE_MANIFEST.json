@@ -1,21 +1,21 @@
 {
   "schema": 1,
   "name": "TFM2 Patch Balance Improvement",
-  "latest_version": "2026.05.29-r16",
+  "latest_version": "2026.05.29-r17",
   "release_date": "2026-05-29",
   "mandatory": false,
-  "summary": "Redesigns patch intensity so weak/normal/strong use the same champion and item volume, differing only by final numeric change range.",
+  "summary": "Restores the intended intensity ranges while keeping r16's volume-unification and duplicate-field protections.",
   "notes": [
-    "Weak now clamps generated numeric changes to 90%..110%, normal to 85%..115%, and strong to 80%..120%.",
+    "Weak uses 80%..125%, normal uses 75%..133.33%, and strong uses 66.7%..150%.",
     "Selected champion count and per-champion item count are kept at the strong-baseline volume for every intensity.",
     "A duplicate champion.field merge patch keeps the first generated item, preventing same-event compounding such as 100 -> 120 -> 144.",
     "The fix is applied inside the EXE generation/merge path so the in-game patch note and actual champion data stay aligned."
   ],
   "download": {
-    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r16/TFM2_Patch_Balance_Improvement_v2026.05.29-r16.zip",
-    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r16.zip",
-    "sha256": "51DEF952E644E05FD706627C948FB3E555DD73217D8FAEF40E12051737C64FEF",
-    "size": 9087495
+    "url": "https://github.com/hexase1-ship-it/tfm2-patch-balance-improvement/releases/download/v2026.05.29-r17/TFM2_Patch_Balance_Improvement_v2026.05.29-r17.zip",
+    "filename": "TFM2_Patch_Balance_Improvement_v2026.05.29-r17.zip",
+    "sha256": "3A5880B77F58AE0307C57B1965C13A8D1B361E28FFDEA9D048103BBFB94208C3",
+    "size": 9089149
   },
   "compatibility": {
     "supported_steam_buildids": [
